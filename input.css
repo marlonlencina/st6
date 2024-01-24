@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #1f2224;
+}
+
+.container {
+  max-width: 1216px;
+  margin: 0 auto;
+}
+
+.padding-left {
+  padding-left: calc((100vw - 1216px) / 2) !important;
+}
+
+.accordion-text {
+  max-height: 0px;
+  overflow: hidden;
+  opacity: 0;
+}
+.accordion-active > .accordion-text {
+  max-height: fit-content;
+  overflow: visible;
+  opacity: 1;
+}
+
+.accordion-button-icon {
+  transition: all 0.25s ease;
+}
+
+.accordion-active .accordion-button-icon {
+  rotate: 90deg;
+}
+
+.header-scrolled {
+  background-color: rgb(23,25,26) !important;
+}
